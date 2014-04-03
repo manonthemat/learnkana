@@ -6,11 +6,12 @@ angular.module('learnKana.controllers', [])
   .controller('homeCtrl', ['$scope', function($scope) {
 
   }])
-  .controller('hiraganaCtrl', ['$scope', function($scope) {
+  .controller('kanaCtrl', ['$scope', '$location', function($scope, $location) {
     var hai_audio = new Audio('sound/hai.mp3');
     var iie_audio = new Audio('sound/iie.mp3');
 
-    $scope.hiragana = [
+    $scope.title = "ひらがな";
+    var hiragana = [
       ['a', 'あ'],
       ['i', 'い'],
       ['u', 'う'],
@@ -58,12 +59,68 @@ angular.module('learnKana.controllers', [])
       ['wo', 'を'],
       ['n', 'ん'],
     ];
+    var katakana = [
+      ['a', 'ア'],
+      ['i', 'イ'],
+      ['u', 'ウ'],
+      ['e', 'エ'],
+      ['o', 'オ'],
+      ['ka', 'カ'],
+      ['ki', 'キ'],
+      ['ku', 'ク'],
+      ['ke', 'ケ'],
+      ['ko', 'コ'],
+      ['sa', 'サ'],
+      ['shi', 'シ'],
+      ['su', 'ス'],
+      ['se', 'セ'],
+      ['so', 'ソ'],
+      ['ta', 'タ'],
+      ['chi', 'チ'],
+      ['tsu', 'ツ'],
+      ['te', 'テ'],
+      ['to', 'ト'],
+      ['na', 'ナ'],
+      ['ni', 'ニ'],
+      ['nu', 'ヌ'],
+      ['ne', 'ネ'],
+      ['no', 'ノ'],
+      ['ha', 'ハ'],
+      ['hi', 'ヒ'],
+      ['fu', 'フ'],
+      ['he', 'ヘ'],
+      ['ho', 'ホ'],
+      ['ma', 'マ'],
+      ['mi', 'ミ'],
+      ['mu', 'ム'],
+      ['me', 'メ'],
+      ['mo', 'モ'],
+      ['ya', 'ヤ'],
+      ['yu', 'ユ'],
+      ['yo', 'ヨ'],
+      ['ra', 'ラ'],
+      ['ri', 'リ'],
+      ['ru', 'ル'],
+      ['re', 'レ'],
+      ['ro', 'ロ'],
+      ['wa', 'ワ'],
+      ['wo', 'ヲ'],
+      ['n', 'ン'],
+    ];
+    if ($location.path().indexOf("hiragana") != -1) {
+      $scope.kana = hiragana;
+      $scope.kanatype = "hiragana";
+    } else {
+      $scope.kana = katakana;
+      $scope.kanatype = "katakana";
+    }
+
     $scope.mistakes = [];
 
-    $scope.selectHiragana = function() {
-      var rand = Math.floor(Math.random() * $scope.hiragana.length);
-      $scope.currentHiragana = $scope.hiragana[rand][1];
-      $scope.result = $scope.hiragana[rand][0];
+    $scope.selectKana = function() {
+      var rand = Math.floor(Math.random() * $scope.kana.length);
+      $scope.currentKana = $scope.kana[rand][1];
+      $scope.result = $scope.kana[rand][0];
     };
 
     $scope.msg = '';
@@ -73,20 +130,17 @@ angular.module('learnKana.controllers', [])
         hai_audio.play();
         $scope.kanacounter -= 1;
         $scope.guess = '';
-        $scope.selectHiragana();
+        $scope.selectKana();
       } else {
         $scope.msg = 'いいえ!';
         iie_audio.play();
-        if ($scope.mistakes.indexOf($scope.currentHiragana) == -1) {
-          $scope.mistakes.push($scope.currentHiragana);
+        if ($scope.mistakes.indexOf($scope.currentKana) == -1) {
+          $scope.mistakes.push($scope.currentKana);
         }
       }
     }
 
-    $scope.selectHiragana();
+    $scope.selectKana();
     $scope.kanacounter = 50; // initialize the counter
-
-  }])
-  .controller('katakanaCtrl', ['$scope', function($scope) {
 
   }]);

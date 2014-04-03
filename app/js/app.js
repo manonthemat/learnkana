@@ -9,7 +9,7 @@ angular.module('learnKana', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});
-  $routeProvider.when('/hiragana', {templateUrl: 'partials/hiragana.html', controller: 'hiraganaCtrl'});
-  $routeProvider.when('/katakana', {templateUrl: 'partials/katakana.html', controller: 'katakanaCtrl'});
+  $routeProvider.when('/hiragana', {templateUrl: 'partials/kana.html', controller: 'kanaCtrl'});
+  $routeProvider.when('/katakana', {templateUrl: 'partials/kana.html', controller: 'kanaCtrl'});
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
