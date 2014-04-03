@@ -58,28 +58,33 @@ angular.module('learnKana.controllers', [])
       ['wo', 'を'],
       ['n', 'ん'],
     ];
+    $scope.mistakes = [];
 
-  $scope.selectHiragana = function() {
-    var rand = Math.floor(Math.random() * $scope.hiragana.length);
-    $scope.currentHiragana = $scope.hiragana[rand][1];
-    $scope.result = $scope.hiragana[rand][0];
-  };
+    $scope.selectHiragana = function() {
+      var rand = Math.floor(Math.random() * $scope.hiragana.length);
+      $scope.currentHiragana = $scope.hiragana[rand][1];
+      $scope.result = $scope.hiragana[rand][0];
+    };
 
-  $scope.msg = '';
-  $scope.checkGuess = function(guess) {
-    if (guess === $scope.result) {
-      $scope.msg = '';
-      hai_audio.play();
-      $scope.guess = '';
-      $scope.selectHiragana();
-    } else {
-      $scope.msg = 'いいえ!';
-      iie_audio.play();
+    $scope.msg = '';
+    $scope.checkGuess = function(guess) {
+      if (guess === $scope.result) {
+        $scope.msg = '';
+        hai_audio.play();
+        $scope.kanacounter -= 1;
+        $scope.guess = '';
+        $scope.selectHiragana();
+      } else {
+        $scope.msg = 'いいえ!';
+        iie_audio.play();
+        if ($scope.mistakes.indexOf($scope.currentHiragana) == -1) {
+          $scope.mistakes.push($scope.currentHiragana);
+        }
+      }
     }
-  }
 
-  // start with the first hiragana to guess
-  $scope.selectHiragana();
+    $scope.selectHiragana();
+    $scope.kanacounter = 50; // initialize the counter
 
   }])
   .controller('katakanaCtrl', ['$scope', function($scope) {
