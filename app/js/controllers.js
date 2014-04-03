@@ -48,6 +48,7 @@ angular.module('learnKana.controllers', [])
       ['mo', 'も'],
       ['ya', 'や'],
       ['yu', 'ゆ'],
+      ['yo', 'よ'],
       ['ra', 'ら'],
       ['ri', 'り'],
       ['ru', 'る'],
@@ -72,7 +73,7 @@ angular.module('learnKana.controllers', [])
       $scope.guess = '';
       $scope.selectHiragana();
     } else {
-      $scope.msg = 'iie!';
+      $scope.msg = 'いいえ!';
       iie_audio.play();
     }
   }
