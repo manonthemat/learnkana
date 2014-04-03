@@ -44,7 +44,7 @@ angular.module('learnKana.controllers', [])
       ['ma', 'ま'],
       ['mi', 'み'],
       ['mu', 'む'],
-      ['me', 'あ'],
+      ['me', 'め'],
       ['mo', 'も'],
       ['ya', 'や'],
       ['yu', 'ゆ'],
@@ -67,7 +67,7 @@ angular.module('learnKana.controllers', [])
   $scope.msg = '';
   $scope.checkGuess = function(guess) {
     if (guess === $scope.result) {
-      $scope.msg = 'hai!';
+      $scope.msg = '';
       hai_audio.play();
       $scope.guess = '';
       $scope.selectHiragana();
