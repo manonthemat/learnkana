@@ -108,20 +108,20 @@ angular.module('learnKana.controllers', [])
     ];
     if ($location.path().indexOf("hiragana") != -1) {
       $scope.title = "ひらがな";
-      $scope.kana = hiragana;
+      var kana = hiragana;
       $scope.kanatype = "hiragana";
     } else {
       $scope.title = "カタカナ";
-      $scope.kana = katakana;
+      var kana = katakana;
       $scope.kanatype = "katakana";
     }
 
     $scope.mistakes = [];
 
     var selectKana = function() {
-      var rand = Math.floor(Math.random() * $scope.kana.length);
-      $scope.currentKana = $scope.kana[rand][1];
-      $scope.result = $scope.kana[rand][0];
+      var rand = Math.floor(Math.random() * kana.length);
+      $scope.currentKana = kana[rand][1];
+      $scope.result = kana[rand][0];
     };
 
     $scope.msg = '';
