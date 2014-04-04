@@ -10,7 +10,6 @@ angular.module('learnKana.controllers', [])
     var hai_audio = new Audio('sound/hai.mp3');
     var iie_audio = new Audio('sound/iie.mp3');
 
-    $scope.title = "ひらがな";
     var hiragana = [
       ['a', 'あ'],
       ['i', 'い'],
@@ -108,9 +107,11 @@ angular.module('learnKana.controllers', [])
       ['n', 'ン'],
     ];
     if ($location.path().indexOf("hiragana") != -1) {
+      $scope.title = "ひらがな";
       $scope.kana = hiragana;
       $scope.kanatype = "hiragana";
     } else {
+      $scope.title = "カタカナ";
       $scope.kana = katakana;
       $scope.kanatype = "katakana";
     }
