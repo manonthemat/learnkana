@@ -126,7 +126,7 @@ angular.module('learnKana.controllers', [])
 
     $scope.msg = '';
     $scope.checkGuess = function() {
-      if ($scope.guess === $scope.result) {
+      if ($scope.guess.toLowerCase() === $scope.result) {
         $scope.msg = '';
         hai_audio.play();
         $scope.kanacounter -= 1;
