@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 <div class="text-center" ng-show="kanacounter > 0">
     <p style="font-size:500%" title="{{result}}">{{currentKana}}</p>
-    <form ng-submit="checkGuess(guess)">
+    <form ng-submit="checkGuess()">
         <input type="text" ng-model="guess" maxlength="3" length="3" ng-maxlength="3" minlength="1" ng-minlength="1" placeholder="rōmaji for {{currentKana}}?" autofocus />
     </form>
     <p ng-show="msg" class="alert alert-danger">{{msg}}<br/>Try again or hover over the {{kanatype}} to get the right solution.</p>

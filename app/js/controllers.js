@@ -118,20 +118,20 @@ angular.module('learnKana.controllers', [])
 
     $scope.mistakes = [];
 
-    $scope.selectKana = function() {
+    var selectKana = function() {
       var rand = Math.floor(Math.random() * $scope.kana.length);
       $scope.currentKana = $scope.kana[rand][1];
       $scope.result = $scope.kana[rand][0];
     };
 
     $scope.msg = '';
-    $scope.checkGuess = function(guess) {
-      if (guess === $scope.result) {
+    $scope.checkGuess = function() {
+      if ($scope.guess === $scope.result) {
         $scope.msg = '';
         hai_audio.play();
         $scope.kanacounter -= 1;
         $scope.guess = '';
-        $scope.selectKana();
+        selectKana();
       } else {
         $scope.msg = 'いいえ!';
         iie_audio.play();
@@ -141,7 +141,7 @@ angular.module('learnKana.controllers', [])
       }
     }
 
-    $scope.selectKana();
+    selectKana();
     $scope.kanacounter = 50; // initialize the counter
 
   }]);
