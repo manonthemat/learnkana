@@ -166,6 +166,12 @@ angular.module('learnKana.controllers', [])
       }
     }
 
+    $scope.restart = function() {
+      $scope.kanacounter = 50;
+      $scope.mistakes = [];
+      selectKana();
+    }
+
     selectKana();
     $scope.kanacounter = 50; // initialize the counter
 
