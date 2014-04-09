@@ -5,7 +5,8 @@ angular.module('learnKana', [
   'learnKana.filters',
   'learnKana.services',
   'learnKana.directives',
-  'learnKana.controllers'
+  'learnKana.controllers',
+  'ui.bootstrap.collapse'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});
