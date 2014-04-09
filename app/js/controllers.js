@@ -81,7 +81,7 @@ angular.module('learnKana.controllers', [])
       ['pi', 'ぴ'],
       ['pu', 'ぷ'],
       ['pe', 'ぺ'],
-      ['po', 'ぽ'],
+      ['po', 'ぽ']
     ];
     var katakana = [
       ['a', 'ア'],
@@ -130,6 +130,31 @@ angular.module('learnKana.controllers', [])
       ['wa', 'ワ'],
       ['wo', 'ヲ'],
       ['n', 'ン'],
+      ['ga', 'ガ'],
+      ['gi', 'ギ'],
+      ['gu', 'グ'],
+      ['ge', 'ゲ'],
+      ['go', 'ゴ'],
+      ['za', 'ザ'],
+      ['ji', 'ジ'],
+      ['zu', 'ズ'],
+      ['ze', 'ゼ'],
+      ['zo', 'ゾ'],
+      ['da', 'ダ'],
+      ['ji', 'ヂ'],
+      ['dzu', 'ヅ'],
+      ['de', 'デ'],
+      ['do', 'ド'],
+      ['ba', 'バ'],
+      ['bi', 'ビ'],
+      ['bu', 'ブ'],
+      ['be', 'ベ'],
+      ['bo', 'ボ'],
+      ['pa', 'パ'],
+      ['pi', 'ピ'],
+      ['pu', 'プ'],
+      ['pe', 'ペ'],
+      ['po', 'ポ']
     ];
     if ($location.path().indexOf("hiragana") != -1) {
       $scope.title = "ひらがな";
