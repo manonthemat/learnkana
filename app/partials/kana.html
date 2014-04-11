@@ -4,7 +4,7 @@
     <form ng-submit="checkGuess()">
         <input type="text" ng-model="guess" maxlength="3" length="3" ng-maxlength="3" minlength="1" ng-minlength="1" placeholder="rōmaji for {{currentKana}}?" autofocus />
     </form>
-    <p ng-if="msg" class="alert alert-danger"><span ng-bind="msg"></span><br/>Try again or hover over the <span ng-bind="kanatype"></span> to get the right solution.</p>
+    <p ng-if="msg" class="alert alert-danger">いいえ！<br/>Try again or hover over the <span ng-bind="kanatype"></span> to get the right solution.</p>
     <p><span ng-bind="kanacounter"></span> left</p>
 </div>
 <div class="text-center" ng-if="kanacounter == 0">

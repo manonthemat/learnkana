@@ -174,16 +174,16 @@ angular.module('learnKana.controllers', [])
       $scope.result = kana[rand][0];
     };
 
-    $scope.msg = '';
+    $scope.msg = false;
     $scope.checkGuess = function() {
       if ($scope.guess.toLowerCase() === $scope.result) {
-        $scope.msg = '';
+        $scope.msg = false;
         hai_audio.play();
         $scope.kanacounter -= 1;
         $scope.guess = '';
         selectKana();
       } else {
-        $scope.msg = 'いいえ!';
+        $scope.msg = true;
         iie_audio.play();
         if ($scope.mistakes.indexOf($scope.currentKana) == -1) {
           $scope.mistakes.push($scope.currentKana);
