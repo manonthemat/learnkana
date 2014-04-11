@@ -1,6 +1,6 @@
-<h1>{{title}}</h1>
+<h1 ng-bind="title"></h1>
 <div class="text-center" ng-show="kanacounter > 0">
-    <p style="font-size:500%" title="{{result}}">{{currentKana}}</p>
+    <p style="font-size:500%" title="{{result}}" ng-bind="currentKana"></p>
     <form ng-submit="checkGuess()">
         <input type="text" ng-model="guess" maxlength="3" length="3" ng-maxlength="3" minlength="1" ng-minlength="1" placeholder="rōmaji for {{currentKana}}?" autofocus />
     </form>
@@ -10,9 +10,7 @@
 <div class="text-center" ng-if="kanacounter == 0">
     <p>Done!</p>
     <p ng-if="mistakes">Practice these <span ng-bind="kanatype"></span>, cause you got them wrong this time.
-        <div ng-repeat="mistake in mistakes">
-            {{mistake}}<br/>
-        </div>
+        <div ng-repeat="mistake in mistakes">{{mistake}}<br/></div>
     </p>
     <p ng-hide="mistakes">Perfect score!</p>
     <button title="One more time!" ng-click="restart()">もういちど！</button>
