@@ -1,6 +1,6 @@
 <h1 ng-bind="title"></h1>
 <div class="text-center" ng-show="kanacounter > 0">
-    <p style="font-size:500%" title="{{result}}" ng-bind="currentKana"></p>
+    <p style="font-size:500%" title="{{result}}"><span ng-mouseenter="kana = result" ng-mouseleave="kana = currentKana">{{kana}}</span></p>
     <form ng-submit="checkGuess()">
         <input type="text" ng-model="guess" maxlength="3" length="3" ng-maxlength="3" minlength="1" ng-minlength="1" placeholder="rōmaji for {{currentKana}}?" autofocus />
     </form>

@@ -220,6 +220,7 @@ angular.module('learnKana.controllers', [])
       var rand = Math.floor(Math.random() * kana.length);
       $scope.currentKana = kana[rand][1];
       $scope.result = kana[rand][0];
+      $scope.kana = $scope.currentKana;
     };
 
     $scope.msg = false;
