@@ -2,5 +2,297 @@
     <h1>Learn Kana</h1>
     <p class="text-justify">Learn Kana is a small AngularJS app to help the user learn Hiragana and Katakana.</p>
     <p class="text-justify">The source code is available on <a href="https://github.com/manonthemat/learnkana" target="_blank">GitHub</a>.</p>
+    <div>
+        <h3>Hiragana ひらがな <small ng-click="showHiragana = !showHiragana"><span ng-hide="showHiragana">show</span><span ng-show="showHiragana">hide</span> hiragana <span class="glyphicon glyphicon-circle-arrow-down"></span></small></h3>
+        <div ng-show="showHiragana">
+	        <table class="table table-bordered table-responsive">
+	            <tr>
+	                <td>あ<br/>a</td>
+	                <td>い<br/>i</td>
+	                <td>う<br/>u</td>
+	                <td>え<br/>e</td>
+	                <td>お<br/>o</td>
+	            </tr>
+	            <tr>
+	                <td>か<br/>ka</td>
+	                <td>き<br/>ki</td>
+	                <td>く<br/>ku</td>
+	                <td>け<br/>ke</td>
+	                <td>こ<br/>ko</td>
+	            </tr>
+	            <tr>
+	                <td>さ<br/>sa</td>
+	                <td>し<br/>shi</td>
+	                <td>す<br/>su</td>
+	                <td>せ<br/>se</td>
+	                <td>そ<br/>so</td>
+	            </tr>
+	            <tr>
+	                <td>た<br/>ta</td>
+	                <td>ち<br/>chi</td>
+	                <td>つ<br/>tsu</td>
+	                <td>て<br/>te</td>
+	                <td>と<br/>to</td>
+	            </tr>
+	            <tr>
+	                <td>な<br/>na</td>
+	                <td>に<br/>ni</td>
+	                <td>ぬ<br/>nu</td>
+	                <td>ね<br/>ne</td>
+	                <td>の<br/>no</td>
+	            </tr>
+	            <tr>
+	                <td>は<br/>ha</td>
+	                <td>ひ<br/>hi</td>
+	                <td>ふ<br/>fu</td>
+	                <td>へ<br/>he</td>
+	                <td>ほ<br/>ho</td>
+	            </tr>
+	            <tr>
+	                <td>ま<br/>ma</td>
+	                <td>み<br/>mi</td>
+	                <td>む<br/>mu</td>
+	                <td>め<br/>me</td>
+	                <td>も<br/>mo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">や<br/>ya</td>
+	                <td colspan="2">ゆ<br/>yu</td>
+	                <td>よ<br/>yo</td>
+	            </tr>
+	            <tr>
+	                <td>ら<br/>ra</td>
+	                <td>り<br/>ri</td>
+	                <td>る<br/>ru</td>
+	                <td>れ<br/>re</td>
+	                <td>ろ<br/>ro</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">わ<br/>wa</td>
+	                <td>を<br/>wo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="5">ん<br/>n</td>
+	            </tr>
+	            <tr>
+	                <td>が<br/>ga</td>
+	                <td>ぎ<br/>gi</td>
+	                <td>ぐ<br/>gu</td>
+	                <td>げ<br/>ge</td>
+	                <td>ご<br/>go</td>
+	            </tr>
+	            <tr>
+	                <td>ざ<br/>za</td>
+	                <td>じ<br/>ji</td>
+	                <td>ず<br/>zu</td>
+	                <td>ぜ<br/>ze</td>
+	                <td>ぞ<br/>zo</td>
+	            </tr>
+	            <tr>
+	                <td>だ<br/>da</td>
+	                <td>ぢ<br/>ji</td>
+	                <td>づ<br/>zu</td>
+	                <td>で<br/>de</td>
+	                <td>ど<br/>do</td>
+	            </tr>
+	            <tr>
+	                <td>ば<br/>ba</td>
+	                <td>び<br/>bi</td>
+	                <td>ぶ<br/>bu</td>
+	                <td>べ<br/>be</td>
+	                <td>ぼ<br/>bo</td>
+	            </tr>
+	            <tr>
+	                <td>ぱ<br/>pa</td>
+	                <td>ぴ<br/>pi</td>
+	                <td>ぷ<br/>pu</td>
+	                <td>ぺ<br/>pe</td>
+	                <td>ぽ<br/>po</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">きゃ<br/>kya</td>
+	                <td colspan="2">きゅ<br/>kyu</td>
+	                <td>きょ<br/>kyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">しゃ<br/>sha</td>
+	                <td colspan="2">しゅ<br/>shu</td>
+	                <td>しょ<br/>sho</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ちゃ<br/>cha</td>
+	                <td colspan="2">ちゅ<br/>chu</td>
+	                <td>ちょ<br/>cho</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">にゃ<br/>nya</td>
+	                <td colspan="2">にゅ<br/>nyu</td>
+	                <td>にょ<br/>nyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ひゃ<br/>hya</td>
+	                <td colspan="2">ひゅ<br/>hyu</td>
+	                <td>ひょ<br/>hyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">みゃ<br/>mya</td>
+	                <td colspan="2">みゅ<br/>myu</td>
+	                <td>みょ<br/>myo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">りゃ<br/>rya</td>
+	                <td colspan="2">りゅ<br/>ryu</td>
+	                <td>りょ<br/>ryo</td>
+	            </tr>
+	        </table>
+	        <p><a href="#/hiragana">Practice hiragana</a></p>
+        </div>
+    </div>
+    <div>
+        <h3>Katakana カタカナ <small ng-click="showKatakana = !showKatakana"><span ng-hide="showKatakana">show</span><span ng-show="showKatakana">hide</span> katakana <span class="glyphicon glyphicon-circle-arrow-down"></span></small></h3>
+        <div ng-show="showKatakana">
+	        <table class="table table-bordered table-responsive">
+	            <tr>
+	                <td>ア<br/>a</td>
+	                <td>イ<br/>i</td>
+	                <td>ウ<br/>u</td>
+	                <td>エ<br/>e</td>
+	                <td>オ<br/>o</td>
+	            </tr>
+	            <tr>
+	                <td>カ<br/>ka</td>
+	                <td>キ<br/>ki</td>
+	                <td>ク<br/>ku</td>
+	                <td>ケ<br/>ke</td>
+	                <td>コ<br/>ko</td>
+	            </tr>
+	            <tr>
+	                <td>サ<br/>sa</td>
+	                <td>シ<br/>shi</td>
+	                <td>ス<br/>su</td>
+	                <td>セ<br/>se</td>
+	                <td>ソ<br/>so</td>
+	            </tr>
+	            <tr>
+	                <td>タ<br/>ta</td>
+	                <td>チ<br/>chi</td>
+	                <td>ツ<br/>tsu</td>
+	                <td>テ<br/>te</td>
+	                <td>ト<br/>to</td>
+	            </tr>
+	            <tr>
+	                <td>ナ<br/>na</td>
+	                <td>ニ<br/>ni</td>
+	                <td>ヌ<br/>nu</td>
+	                <td>ネ<br/>ne</td>
+	                <td>ノ<br/>no</td>
+	            </tr>
+	            <tr>
+	                <td>ハ<br/>ha</td>
+	                <td>ヒ<br/>hi</td>
+	                <td>フ<br/>fu</td>
+	                <td>ヘ<br/>he</td>
+	                <td>ホ<br/>ho</td>
+	            </tr>
+	            <tr>
+	                <td>マ<br/>ma</td>
+	                <td>ミ<br/>mi</td>
+	                <td>ム<br/>mu</td>
+	                <td>メ<br/>me</td>
+	                <td>モ<br/>mo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ヤ<br/>ya</td>
+	                <td colspan="2">ユ<br/>yu</td>
+	                <td>ヨ<br/>yo</td>
+	            </tr>
+	            <tr>
+	                <td>ラ<br/>ra</td>
+	                <td>リ<br/>ri</td>
+	                <td>ル<br/>ru</td>
+	                <td>レ<br/>re</td>
+	                <td>ロ<br/>ro</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ワ<br/>wa</td>
+	                <td>ヲ<br/>wo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="5">ン<br/>n</td>
+	            </tr>
+	            <tr>
+	                <td>ガ<br/>ga</td>
+	                <td>ギ<br/>gi</td>
+	                <td>グ<br/>gu</td>
+	                <td>ゲ<br/>ge</td>
+	                <td>ゴ<br/>go</td>
+	            </tr>
+	            <tr>
+	                <td>ザ<br/>za</td>
+	                <td>ジ<br/>ji</td>
+	                <td>ズ<br/>zu</td>
+	                <td>ゼ<br/>ze</td>
+	                <td>ゾ<br/>zo</td>
+	            </tr>
+	            <tr>
+	                <td>ダ<br/>da</td>
+	                <td>ヂ<br/>ji</td>
+	                <td>ヅ<br/>zu</td>
+	                <td>デ<br/>de</td>
+	                <td>ド<br/>do</td>
+	            </tr>
+	            <tr>
+	                <td>バ<br/>ba</td>
+	                <td>ビ<br/>bi</td>
+	                <td>ブ<br/>bu</td>
+	                <td>ベ<br/>be</td>
+	                <td>ボ<br/>bo</td>
+	            </tr>
+	            <tr>
+	                <td>パ<br/>pa</td>
+	                <td>ピ<br/>pi</td>
+	                <td>プ<br/>pu</td>
+	                <td>ペ<br/>pe</td>
+	                <td>ポ<br/>po</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">キャ<br/>kya</td>
+	                <td colspan="2">キュ<br/>kyu</td>
+	                <td>キョ<br/>kyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">シャ<br/>sha</td>
+	                <td colspan="2">シュ<br/>shu</td>
+	                <td>ショ<br/>sho</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">チャ<br/>cha</td>
+	                <td colspan="2">チュ<br/>chu</td>
+	                <td>チョ<br/>cho</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ニャ<br/>nya</td>
+	                <td colspan="2">ニュ<br/>nyu</td>
+	                <td>ニョ<br/>nyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ヒャ<br/>hya</td>
+	                <td colspan="2">ヒュ<br/>hyu</td>
+	                <td>ヒョ<br/>hyo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">ミャ<br/>mya</td>
+	                <td colspan="2">ミュ<br/>myu</td>
+	                <td>ミョ<br/>myo</td>
+	            </tr>
+	            <tr>
+	                <td colspan="2">リャ<br/>rya</td>
+	                <td colspan="2">リュ<br/>ryu</td>
+	                <td>リョ<br/>ryo</td>
+	            </tr>
+	        </table>
+	        <p><a href="#/katakana">Practice katakana</a></p>
+	    </div>
+    </div>
 </div>
 
