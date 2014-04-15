@@ -9,7 +9,7 @@
 </div>
 <div class="text-center" ng-if="kanacounter == 0">
     <p>Done!</p>
-    <p ng-if="mistakes">Practice these <span ng-bind="kanatype"></span>, cause you got them wrong this time.
+    <p ng-if="mistakes">Practice these <span ng-bind="mistakes.length"></span> <span ng-bind="kanatype"></span>, cause you got them wrong this time.
         <div ng-repeat="mistake in mistakes">{{mistake}}<br/></div>
     </p>
     <p ng-hide="mistakes">Perfect score!</p>
