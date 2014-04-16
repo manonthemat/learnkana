@@ -2,8 +2,5 @@
 
 /* Services */
 
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('learnKana.services', []).
-  value('version', '0.4.1');
+  value('version', '0.4.2');
