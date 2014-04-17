@@ -3,4 +3,4 @@
 /* Services */
 
 angular.module('learnKana.services', []).
-  value('version', '0.4.2');
+  value('version', '0.4.3');

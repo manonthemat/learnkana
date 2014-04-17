@@ -4,6 +4,8 @@
 
 angular.module('learnKana.controllers', [])
   .controller('homeCtrl', ['$scope', function($scope) {
+    var konnichiwa_audio = new Audio('sound/konnichiwa.mp3');
+    konnichiwa_audio.play();
 
   }])
   .controller('kanaCtrl', ['$scope', '$location', function($scope, $location) {
